@@ -1,4 +1,5 @@
-require_relative("../models/student")
+require_relative("../models/student.rb")
+require_relative('../db/sqlrunner.rb')
 
 student1 = Student.new({
   'first_name' => "Harry",

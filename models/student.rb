@@ -1,19 +1,23 @@
 class Student
-  attr_reader :first_name, :last_name, :house, :age
+  attr_reader :id
+  attr_accessor :first_name, :last_name, :house, :age
 
-  def initialize(first_name, last_name, house, age )
-    @first_name = first_name
-    @last_name = last_name
-    @house = house
-    @age = age
+  def initialize(params)
+    @id = params['id'].to_i
+    @first_name = params['first_name']
+    @last_name = params['last_name']
+    @house = params['house']
+    @age = params['age'].to_i
   end
 
   def save()
-    sql "INSERT into students 
+    sql = "INSERT INTO students 
         (first_name, last_name, house, age)
         VALUES 
-        ('#{@first_name}', '#{@last_name}','#{@house}', '#{@age}')"
-        
+        ('#{@first_name}', '#{@last_name}','#{@house}', '#{@age}')
+        RETURNING id;"
+    student_data = SqlRunner.run(sql)
+    @id = student_data.first()['id'].to_i
   end
 
 

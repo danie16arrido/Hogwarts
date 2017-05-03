@@ -1,4 +1,5 @@
 DROP TABLE students;
+DROP TABLE houses;
 
 CREATE TABLE students (
   id serial4 primary key,
@@ -8,7 +9,7 @@ CREATE TABLE students (
   age int2
 );
 
-CREATE TABLE house (
+CREATE TABLE houses (
   id serial4 primary key,
-  name varchar(255),
+  name varchar(255)
 );
