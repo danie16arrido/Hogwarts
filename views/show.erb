@@ -4,3 +4,8 @@
 <li>Last Name: <%= @student.last_name %></li>
 <li>Age: <%= @student.age %></li>
 <li>House: <%= @student.get_house().name %></li>
+<ul>
+<a href="/students/<%= @student.id %>/edit">Edit Student Details</a>
+<form method="post" action="/students/<%= @student.id %>/delete">
+  <input type="submit" value="Delete Student"/>
+</form>

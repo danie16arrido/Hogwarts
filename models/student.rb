@@ -48,4 +48,21 @@ class Student
     return House.new(result.first())
   end
 
+  def update()
+    sql = "
+    UPDATE students SET
+    (first_name, last_name, age, house) =
+    ('#{@first_name}', '#{@last_name}', '#{@age}', '#{@house}')
+    WHERE id = #{@id};
+    "
+    result = SqlRunner.run(sql)
+  end
+
+  def delete()
+    sql = "
+      DELETE FROM students WHERE id = #{@id};
+    "
+    SqlRunner.run(sql)
+  end
+
 end
