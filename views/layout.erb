@@ -2,18 +2,21 @@
 <html>
 <head>
   <title>Hogwarts</title>
+  <link rel='stylesheet' href='/style.css'>
 </head>
   <body>
     <header>
-      <h1>Hogwarts</h1>
+      <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Hogwarts_coat_of_arms_colored_with_shading.svg" height="160" width="160">
+      <h1>Hogwarts School of Witchcraft and Wizardry</h1>
     </header>
     <nav>
       <a href ="/students">All Students</a>
+      <a href ="/students/houses">Houses</a>
       <a href ="/students/new">Create Student</a>
     </nav>
     <main>
       <%= yield %>
     </main>
-    <footer>Hogwarts stablish in 1567</footer>
+    <footer>Hogwarts stablished in 990 AD find us at 1 Hogwarts Castle lane.</footer>
   </body>
 </html>

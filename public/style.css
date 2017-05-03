@@ -1,0 +1,78 @@
+body {
+    width: 80%;
+    margin: auto;
+		padding: 2em;
+}
+section {
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #efefef;
+  /*border: 2px solid #e3a000;*/
+}
+sectiona {
+  /*margin-bottom: 10px;*/
+  padding: 10px;
+  background-color: #efefef;
+  /*border: 2px solid #e3a000;*/
+}
+header {
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #efefef;
+  /*border: 2px solid #033807;*/
+}
+nav {
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #efefef;
+  font-weight: 300; font-size: 24px; margin: 0px 0px 0px 0px; line-height: 120%; font-family: 'Open sans', sans-serif;
+  border: 0.1px dashed #00165e;
+}
+main {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #efefef;
+  /*border: 2px solid #00165e;*/
+}
+footer {
+  margin-bottom: 10px;
+  padding: 30px;
+  background-color: #efefef;
+  font: 16px Georgia;
+  /*border: 2px solid #2d004d	;*/
+}
+h1 { color: black; font-family: "Great Vibes", cursive; font-size: 35px; line-height: 120px; font-weight: normal; text-shadow: 0 1px 1px #fff; float: right; padding-right: 80px;}
+/*h1 { font-weight: 300; font-size: 38px; margin: 0px 0px 0px 0px; line-height: 120%; font-family: 'Open sans', sans-serif; float: left;}*/
+h2 {
+  padding-left: : 30px;
+}
+a { color: #f20553; text-decoration: none; padding-right: 30px;}
+
+
+a:hover { color: #D80649; text-decoration: underline; }
+
+li {font: 16px Georgia; padding: 5px;}
+
+
+.faq {
+	counter-reset: my-badass-counter;
+}
+.faq dt {
+	position: relative;
+	font: bold 16px Georgia;
+	padding: 4px 0 10px 0;
+}
+.faq dt:before {
+	content: counter(my-badass-counter);
+	counter-increment: my-badass-counter;
+	position: absolute;
+	left: 0;
+	top: 0;
+	font: bold 50px/1 Sans-Serif;
+}
+.faq dd {
+	margin: 0 0 10px 0;
+}
+.faq dt, .faq dd {
+	padding-left: 50px;
+}
