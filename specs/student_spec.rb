@@ -1,5 +1,5 @@
 require ("minitest/autorun")
-require("minitest/rg")
+require("minitest/emoji")
 require_relative("../models/student")
 
 class TestStudent < Minitest::Test
@@ -19,4 +19,3 @@ class TestStudent < Minitest::Test
 
 
 end
-

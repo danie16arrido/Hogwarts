@@ -1,16 +1,16 @@
-DROP TABLE houses;
-DROP TABLE students;
+DROP TABLE IF EXISTS students;
+DROP TABLE IF EXISTS houses;
 
-
-CREATE TABLE students (
-  id serial4 primary key,
-  first_name varchar(255),
-  last_name varchar(255),
-  house varchar(255) REFERENCES houses(id),
-  age int2
-);
 
 CREATE TABLE houses (
-  id serial4 primary key,
-  name varchar(255)
+  id SERIAL4 PRIMARY KEY,
+  name VARCHAR(255)
+);
+
+CREATE TABLE students (
+  id SERIAL4 PRIMARY KEY,
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
+  house INT4 REFERENCES houses(id) ON DELETE CASCADE,
+  age INT2
 );
