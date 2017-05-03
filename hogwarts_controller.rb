@@ -4,7 +4,7 @@ require('pry-byebug')
 require_relative('./models/student.rb')
 
 get '/home' do
-  "Hi"
+  erb(:index)
 end
 
 
