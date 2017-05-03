@@ -1,0 +1,10 @@
+<h2>All Students</h2>
+
+<% @all_students.each() do |a_student| %>
+<ul>
+  <li>Name: <%= a_student.first_name %></li>
+  <li>Last Name: <%= a_student.last_name %></li>
+  <li>House: <%= a_student.house %></li>
+  <li>Age: <%= a_student.age %></li>
+</ul>
+<% end %>
