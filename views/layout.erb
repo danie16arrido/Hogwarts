@@ -3,12 +3,17 @@
 <head>
   <title>Hogwarts</title>
 </head>
-<body>
-
-<nav>
-  <a href ="/students">All Students</a>
-  <a href ="/students/new">Create Student</a>
-</nav>
-  <%= yield %>
-</body>
+  <body>
+    <header>
+      <h1>Hogwarts</h1>
+    </header>
+    <nav>
+      <a href ="/students">All Students</a>
+      <a href ="/students/new">Create Student</a>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>Hogwarts stablish in 1567</footer>
+  </body>
 </html>

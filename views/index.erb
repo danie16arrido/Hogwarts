@@ -1,7 +1,8 @@
 <h2>All Students</h2>
-
+<section>
 <% @all_students.each() do |a_student| %>
 <ul>
   <li><%= a_student.first_name %> <%= a_student.last_name %> <a href="/students/<%= a_student.id%>">Details</a></li>
 </ul>
 <% end %>
+</section>
