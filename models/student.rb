@@ -11,9 +11,9 @@ class Student
   end
 
   def save()
-    sql = "INSERT INTO students 
+    sql = "INSERT INTO students
         (first_name, last_name, house, age)
-        VALUES 
+        VALUES
         ('#{@first_name}', '#{@last_name}','#{@house}', '#{@age}')
         RETURNING id;"
     student_data = SqlRunner.run(sql)
@@ -37,5 +37,15 @@ class Student
     return Student.new(result.first())
   end
 
+  def get_house()
+    sql = "
+      SELECT h.* FROM students s
+      INNER JOIN houses h
+      ON s.house =  h.id
+      WHERE s.id = #{@id}
+    "
+    result = SqlRunner.run(sql)
+    return House.new(result.first())
+  end
 
 end

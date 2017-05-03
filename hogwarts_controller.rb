@@ -25,6 +25,11 @@ post '/students' do
   erb(:create)
 end
 
+get '/students/:id' do
+  @student = Student.find_by_id( params[:id] )
+  erb(:show)
+end
+
 
 
 
