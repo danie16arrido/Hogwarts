@@ -1,5 +1,5 @@
 class Student
-attr_reader :first_name, :last_name, :house, :age
+  attr_reader :first_name, :last_name, :house, :age
 
   def initialize(first_name, last_name, house, age )
     @first_name = first_name
@@ -8,6 +8,13 @@ attr_reader :first_name, :last_name, :house, :age
     @age = age
   end
 
+  def save()
+    sql "INSERT into students 
+        (first_name, last_name, house, age)
+        VALUES 
+        ('#{@first_name}', '#{@last_name}','#{@house}', '#{@age}')"
+        
+  end
 
 
 end
